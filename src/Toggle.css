@@ -1,0 +1,38 @@
+.Toggle {
+    width: 300px;
+    position: relative;
+}
+
+.Toggle__Slider {
+  width: 300px;
+  height: 35px;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.Toggle__Slider:before {
+    position: absolute;
+    content: "";
+    height: 35px;
+    width: 160px;
+    background-color: #0FE5C1;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 1000px;
+    -webkit-transform: translateX(-150px);
+    -ms-transform: translateX(-150px);
+    transform: translateX(-150px);
+  }
+
+  .Toggle__Checkbox {
+    top: -99999px; 
+    left: -99999px;
+  }
+
+
+  input:checked + .Toggle__Slider:before {
+    -webkit-transform: translateX(-10px);
+    -ms-transform: translateX(-10px);
+    transform: translateX(-10px);
+    background-color: #FE0D5A;
+  }
